@@ -11,8 +11,9 @@
       "image_name": "log-access-analytics-{{timestamp}}",
       "image_family": "log-access-analytics",
       "source_image": "ubuntu-1804-bionic-v20190612",
-      "ssh_username": "packer",
-      "zone": "us-central1-a"
+      "zone": "us-central1-a",
+      "startup_script_file": "$HOME/project/start.sh",
+      "ssh_username": "packer"
     }
   ],
   "provisioners": [
