@@ -1,12 +1,13 @@
 {
   "variables": {
-    "keyfile_json": "{{env `GOOGLE_APPLICATION_CREDENTIALS`}}"
+    "keyfile_json": "{{env `GOOGLE_APPLICATION_CREDENTIALS`}}",
+    "project_id": "{{env `TF_VAR_project_id`}}"
   },
   "builders": [
     {
       "type": "googlecompute",
       "account_file": "{{user `keyfile_json`}}",
-      "project_id": "theta-strata-242418",
+      "project_id": "{{user `project_id`}}",
       "image_name": "log-access-analytics-{{timestamp}}",
       "image_family": "log-access-analytics",
       "source_image": "ubuntu-1804-bionic-v20190612",
