@@ -1,6 +1,6 @@
 {
   "variables": {
-    "keyfile_json": "{{env `GOOGLE_CLOUD_KEYFILE_JSON`}}"
+    "keyfile_json": "{{env `GOOGLE_APPLICATION_CREDENTIALS`}}"
   },
   "builders": [
     {
