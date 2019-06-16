@@ -1,9 +1,9 @@
 - name: Create the project folder
   file:
-    path: $HOME/project
+    path: project
     state: directory
 
 - name: Clone the project repository
   git:
     repo: https://github.com/BrunoVieira319/log-access-analytics.git
-    dest: $HOME/project
+    dest: project
