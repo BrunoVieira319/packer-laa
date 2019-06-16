@@ -12,7 +12,6 @@
       "image_family": "log-access-analytics",
       "source_image": "ubuntu-1804-bionic-v20190612",
       "zone": "us-central1-a",
-      "startup_script_file": "scripts/start.sh",
       "ssh_username": "packer"
     }
   ],
