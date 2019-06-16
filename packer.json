@@ -1,0 +1,23 @@
+{
+  "variables": {
+    "keyfile_json": "{{env `GOOGLE_CLOUD_KEYFILE_JSON`}}"
+  },
+  "builders": [
+    {
+      "type": "googlecompute",
+      "account_file": "{{user `keyfile_json`}}",
+      "project_id": "theta-strata-242418",
+      "image_name": "log-access-analytics-{{timestamp}}",
+      "image_family": "log-access-analytics",
+      "source_image": "ubuntu-1804-bionic-v20190612",
+      "ssh_username": "packer",
+      "zone": "us-central1-a"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "ansible",
+      "playbook_file": "./ansible/playbook.yml"
+    }
+  ]
+}
